@@ -82,13 +82,13 @@ class LuckyHobbies(Lucky):
         self.andando_skate = andando_skate
 
     def dancar_musica(self):
-        print(f"{self.nome} está dançando {self.dancar} ao som de {self.musica} 🎶")
+        print(f"{self.nome} está dançando {self.dancar} ao som de {self.musica} ")
 
     def pularzinho(self):
         print(f"{self.nome} está pulando assim: {self.pular}")
 
     def andar_de_skate(self):
-        print(f"{self.nome} está andando de skate no estilo {self.andando_skate} 🛹")
+        print(f"{self.nome} está andando de skate no estilo {self.andando_skate} ")
 
 
 class LuckyDorminhoco(Lucky):
@@ -99,7 +99,7 @@ class LuckyDorminhoco(Lucky):
         self.cansaco = cansado
         
     def dormirzinho(self):
-        print(f"{self.nome} está dormindo {self.dormir_tipo} 💤")
+        print(f"{self.nome} está dormindo {self.dormir_tipo} ")
 
     def fazer_ronco(self):
         print(f"{self.nome} está roncando assim: {self.ronco}")
@@ -139,7 +139,7 @@ def main():
 
         if tipo == "1":
             bicho = Lucky(nome_bichinho)
-            historico.append("Lucky Básico")
+            historico.append("Lucky Básico") #append - adiciona o valor passado ao final de uma lista
         elif tipo == "2":
             cor_asa = input("Cor das asas: ")
             poder = input("Poder: ")
@@ -171,7 +171,7 @@ def main():
             print("3 - Passagem do tempo")
             print("4 - Ver status")
             
-            if isinstance(bicho, LuckySkin):
+            if isinstance(bicho, LuckySkin): #isinstance - verifica se um objeto é de uma determinada classe - retorna True ou False
                 print("5 - Mudar skin")
                 print("6 - Mostrar skin")
                 print("7 - Trocar poder")
@@ -196,11 +196,11 @@ def main():
                 bicho.brincar(qtd)
             elif escolha == "3":
                 bicho.passagemTempo()
-                print("O tempo passou...")
+                print("O tempo passou")
             elif escolha == "4":
                 bicho.status()
             elif escolha == "5":
-                if isinstance(bicho, LuckySkin): #isinstance - verifica se um objeto é de uma determinada classe - retorna True ou False
+                if isinstance(bicho, LuckySkin): 
                     bicho.mudar_skin()
                 elif isinstance(bicho, LuckyHobbies):
                     bicho.dancar_musica()
@@ -221,7 +221,7 @@ def main():
                 elif isinstance(bicho, LuckyDorminhoco):
                     bicho.mostrar_cansaco()
             elif escolha == "9":
-                print("Voltando ao menu principal...")
+                print("Voltando ao menu principal")
                 break
             else:
                 print("Opção inválida, tente novamente.")
