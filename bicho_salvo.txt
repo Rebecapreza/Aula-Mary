@@ -1,0 +1,10 @@
+TamagoshiSkin
+Lucky
+20
+10
+100
+2
+azul
+agua
+branco
+azul escuro
